@@ -1,11 +1,265 @@
-<!DOCTYPE html>
-<html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>PANTERA</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>Olá, PANTERA! 🐆</h1>
-    <p>Meu primeiro projeto.</p>
+
+    <div class="barra-progresso" id="barraProgresso"></div>
+
+    <header>
+        <nav>
+            <a href="#inicio">PANTERA</a>
+
+            <div>
+    <a class="link-navegacao" href="#sobre">Sobre</a>
+    <a class="link-navegacao" href="#habilidades">Habilidades</a>
+    <a class="link-navegacao" href="#projetos">Projetos</a>
+    <a class="link-navegacao" href="#contato">Contato</a>
+</div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- INÍCIO -->
+      <section id="inicio">
+
+    <div class="hero-conteudo">
+
+        <p class="hero-kicker">
+            tecnologia · criação · testes
+        </p>
+
+        <h1>
+            Eu sou a
+            <span>Pantera.</span>
+        </h1>
+
+        <h2>
+            Sou uma dev em formação.
+            <br>
+            E esse site foi criado com o objetivo de ser o meu portifólio independente
+        </h2>
+
+        <p class="hero-texto">
+            Este é o meu espaço para fazer testes e conquistar clientes.
+        </p>
+
+        <div class="hero-acoes">
+            <a href="#projetos">Conheça meus projetos</a>
+
+            <a href="#sobre" class="botao-secundario">
+                Quem eu sou eu?
+            </a>
+        </div>
+
+    </div>
+
+
+    <div class="hero-assinatura">
+
+        <span>✦</span>
+
+        <div>
+            <strong>Ranielle Moreira</strong>
+
+            <p>
+                :p
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="rabisco rabisco-1">✦</div>
+    <div class="rabisco rabisco-2">✷</div>
+    <div class="rabisco rabisco-3">✦</div>
+
+</section>
+
+
+        <!-- SOBRE -->
+        <section id="sobre">
+
+            <h2>Sobre mim</h2>
+
+            <p>
+                Eu sou uma estudante de ADS que está no seu último ano de LEMAF.
+            </p>
+
+            <p>
+                A PANTERA nasceu como um espaço para que eu consiga 
+                demonstrar as minhas habilidades para futuros clientes.
+            </p>
+
+        </section>
+
+
+        <!-- HABILIDADES -->
+        <section id="habilidades">
+
+            <h2>Habilidades</h2>
+
+            <div class="habilidades-grid">
+
+                <article class="habilidade-card">
+                    <h3>HTML</h3>
+                    <p>Estrutura e organização de páginas.</p>
+                </article>
+
+                <article class="habilidade-card">
+                    <h3>CSS</h3>
+                    <p>Design, layout e identidade visual.</p>
+                </article>
+
+                <article class="habilidade-card">
+                    <h3>JavaScript</h3>
+                    <p>Interação e comportamento.</p>
+                </article>
+
+                <article class="habilidade-card">
+                    <h3>C/C++</h3>
+                    <p>
+                        Programação de projetos com Arduino
+                        e sistemas embarcados.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROJETOS -->
+        <section id="projetos">
+
+            <h2>Projetos</h2>
+
+            <div class="projetos-grid">
+
+                <article class="projeto-card">
+
+                    <div class="projeto-topo">
+                        <span>01</span>
+                        <h3>PANTERA</h3>
+                    </div>
+
+                    <p>
+                        Meu projeto pessoal para explorar
+                        desenvolvimento web, identidade visual
+                        e experiências interativas.
+                    </p>
+
+                    <button type="button" class="botao-projeto">
+                        Ver detalhes
+                    </button>
+
+                    <div class="projeto-detalhes">
+                        <p>
+                            Construído com HTML, CSS e JavaScript.
+                            A PANTERA também funciona como uma demonstração
+                            prática da minha evolução na programação.
+                        </p>
+                    </div>
+
+                </article>
+
+
+                <article class="projeto-card">
+
+                    <div class="projeto-topo">
+                        <span>02</span>
+                        <h3>ARDUINO</h3>
+                    </div>
+
+                    <p>
+                        Projeto de automação e programação com Arduino,
+                        envolvendo sensores, LEDs e motores.
+                    </p>
+
+                    <button type="button" class="botao-projeto">
+                        Ver detalhes
+                    </button>
+
+                    <div class="projeto-detalhes">
+                        <p>
+                            Projeto desenvolvido durante meus estudos,
+                            explorando programação, eletrônica e integração
+                            entre software e hardware.
+                        </p>
+                    </div>
+
+                </article>
+
+
+                <article class="projeto-card">
+
+                    <div class="projeto-topo">
+                        <span>03</span>
+                        <h3>EM BREVE</h3>
+                    </div>
+
+                    <p>
+                        Um novo projeto para continuar ampliando
+                        minhas habilidades.
+                    </p>
+
+                    <button type="button" class="botao-projeto">
+                        Em desenvolvimento
+                    </button>
+
+                    <div class="projeto-detalhes">
+                        <p>
+                            Este espaço será preenchido conforme novos
+                            projetos forem desenvolvidos.
+                        </p>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTATO -->
+        <section id="contato">
+
+            <h2>Vamos conversar?</h2>
+
+            <p>
+                Entre em contato comigo ou conheça
+                meus outros trabalhos.
+            </p>
+
+            <a href="#">GitHub</a>
+            <a href="#">LinkedIn</a>
+
+        </section>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+    <footer>
+
+        <p>© 2026 PANTERA</p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
 </body>
+
 </html>

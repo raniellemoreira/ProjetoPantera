@@ -1,0 +1,944 @@
+/* =========================
+   IDENTIDADE VISUAL
+========================= */
+
+:root {
+    --bordo: #68172F;
+    --bordo-escuro: #4A0F22;
+
+    --rosa: #E89AB4;
+    --rosa-claro: #F3C2D2;
+
+    --creme: #F5E8D0;
+    --creme-claro: #FFF7EA;
+
+    --preto: #191519;
+    --cinza: #756B70;
+
+    --borda-clara: rgba(245, 232, 208, 0.28);
+    --borda-escura: rgba(104, 23, 47, 0.28);
+}
+
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: var(--creme);
+    color: var(--preto);
+    line-height: 1.6;
+}
+
+
+/* =========================
+   BARRA DE PROGRESSO
+========================= */
+
+.barra-progresso {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 0%;
+    height: 5px;
+
+    background-color: var(--rosa);
+
+    z-index: 3000;
+
+    transition: width 0.1s linear;
+}
+
+
+/* =========================
+   HEADER / NAVEGAÇÃO
+========================= */
+
+header {
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    padding: 20px 6%;
+
+    background-color: var(--bordo);
+
+    border-bottom: 1px solid var(--preto);
+}
+
+nav {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 30px;
+}
+
+nav > a {
+    color: var(--creme);
+
+    text-decoration: none;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 1.65rem;
+
+    font-weight: 600;
+
+    letter-spacing: -0.5px;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+nav > a:hover {
+    color: var(--rosa);
+
+    transform: rotate(-2deg);
+}
+
+nav div {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 28px;
+
+    flex-wrap: wrap;
+}
+
+nav div a {
+    color: var(--creme);
+
+    text-decoration: none;
+
+    font-size: 0.78rem;
+
+    font-weight: 500;
+
+    letter-spacing: 0.3px;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+nav div a:hover {
+    color: var(--rosa);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   NAVEGAÇÃO ATIVA
+========================= */
+
+.link-navegacao {
+    position: relative;
+
+    opacity: 0.68;
+}
+
+.link-navegacao::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -7px;
+
+    width: 0;
+    height: 2px;
+
+    background-color: var(--rosa);
+
+    transition: width 0.3s ease;
+}
+
+.link-navegacao.ativo {
+    opacity: 1;
+
+    color: var(--rosa);
+}
+
+.link-navegacao.ativo::after {
+    width: 100%;
+}
+
+
+/* =========================
+   SEÇÕES GERAIS
+========================= */
+
+section {
+    padding: 120px 10%;
+}
+
+section h2 {
+    margin-bottom: 40px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(2.7rem, 5vw, 4.7rem);
+
+    font-weight: 600;
+
+    line-height: 0.98;
+
+    letter-spacing: -1.5px;
+
+    color: var(--bordo);
+}
+
+
+/* =========================
+   INÍCIO / PERSONALIDADE
+========================= */
+
+#inicio {
+    position: relative;
+
+    min-height: 90vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 100px 10%;
+
+    overflow: hidden;
+
+    background-color: var(--bordo);
+
+    color: var(--creme);
+
+    border-bottom-left-radius: 36px;
+    border-bottom-right-radius: 36px;
+}
+
+
+/* Fundo decorativo discreto */
+
+#inicio::before {
+    content: "";
+
+    position: absolute;
+
+    width: 360px;
+    height: 360px;
+
+    top: -150px;
+    right: -100px;
+
+    border: 1px solid rgba(232, 154, 180, 0.454);
+
+    border-radius: 50%;
+}
+
+#inicio::after {
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    bottom: -100px;
+    left: -60px;
+
+    border: 1px solid rgba(245, 232, 208, 0.16);
+
+    border-radius: 50%;
+}
+
+
+/* Conteúdo */
+
+.hero-conteudo {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 920px;
+}
+
+.hero-kicker {
+    margin-bottom: 18px;
+
+    font-size: 0.75rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 3px;
+
+    color: var(--rosa);
+}
+
+#inicio h1 {
+    margin-bottom: 34px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(5rem, 13vw, 11rem);
+
+    font-weight: 600;
+
+    line-height: 0.8;
+
+    letter-spacing: -5px;
+
+    color: var(--creme);
+}
+
+#inicio h1 span {
+    display: block;
+
+    color: var(--rosa);
+}
+
+#inicio h2 {
+    max-width: 800px;
+
+    margin-bottom: 28px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(1.75rem, 4vw, 3.1rem);
+
+    font-weight: 500;
+
+    line-height: 1.08;
+
+    letter-spacing: -0.5px;
+
+    color: var(--creme);
+}
+
+..hero-texto {
+    max-width: 630px;
+
+    margin-bottom: 35px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 1.05rem;
+
+    font-weight: 400;
+
+    line-height: 1.75;
+
+    letter-spacing: 0.1px;
+
+    color: var(--creme);
+
+    opacity: 0.82;
+}
+
+
+/* Botões */
+
+.hero-acoes {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 16px;
+}
+
+#inicio > .hero-conteudo .hero-acoes a {
+    display: inline-block;
+
+    width: fit-content;
+
+    padding: 13px 22px;
+
+    text-decoration: none;
+
+    font-size: 0.84rem;
+
+    font-weight: 600;
+
+    border-radius: 999px;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+#inicio > .hero-conteudo .hero-acoes a:first-child {
+    background-color: var(--rosa);
+
+    color: var(--preto);
+}
+
+#inicio > .hero-conteudo .hero-acoes a:first-child:hover {
+    background-color: var(--rosa-claro);
+
+    transform: translateY(-4px);
+}
+
+#inicio > .hero-conteudo .hero-acoes .botao-secundario {
+    background-color: transparent;
+
+    color: var(--creme);
+
+    border: 1px solid var(--borda-clara);
+}
+
+#inicio > .hero-conteudo .hero-acoes .botao-secundario:hover {
+    background-color: var(--creme);
+
+    color: var(--bordo);
+
+    transform: translateY(-4px);
+}
+
+
+/* Assinatura */
+
+.hero-assinatura {
+    position: absolute;
+
+    right: 8%;
+    bottom: 10%;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    transform: rotate(-4deg);
+}
+
+.hero-assinatura > span {
+    color: var(--rosa);
+
+    font-size: 1.8rem;
+}
+
+.hero-assinatura strong {
+    display: block;
+
+    margin-bottom: 2px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 1.05rem;
+
+    font-weight: 600;
+
+    color: var(--creme);
+}
+
+.hero-assinatura p {
+    margin: 0;
+
+    font-size: 0.7rem;
+
+    color: var(--rosa-claro);
+
+    letter-spacing: 0.3px;
+}
+
+
+/* Rabiscos */
+
+.rabisco {
+    position: absolute;
+
+    z-index: 1;
+
+    pointer-events: none;
+
+    user-select: none;
+
+    font-family: "Playfair Display", serif;
+}
+
+.rabisco-1 {
+    top: 13%;
+    right: 10%;
+
+    color: var(--rosa);
+
+    font-size: 4rem;
+
+    transform: rotate(13deg);
+}
+
+.rabisco-2 {
+    right: 38%;
+    bottom: 28%;
+
+    color: var(--creme);
+
+    font-size: 2rem;
+
+    transform: rotate(-17deg);
+}
+
+.rabisco-3 {
+    top: 23%;
+    left: 5%;
+
+    color: var(--rosa-claro);
+
+    font-size: 1.9rem;
+
+    transform: rotate(-18deg);
+}
+
+
+/* =========================
+   SOBRE
+========================= */
+
+#sobre {
+    min-height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: var(--creme);
+}
+
+#sobre p {
+    max-width: 760px;
+
+    margin-bottom: 20px;
+
+    font-size: 1.16rem;
+
+    color: var(--preto);
+
+    opacity: 0.82;
+}
+
+
+/* =========================
+   HABILIDADES
+========================= */
+
+#habilidades {
+    position: relative;
+
+    background-color: var(--rosa);
+}
+
+#habilidades h2 {
+    color: var(--bordo);
+}
+
+.habilidades-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 22px;
+}
+
+.habilidade-card {
+    min-height: 230px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    padding: 32px;
+
+    background-color: var(--creme-claro);
+
+    border: 2px solid var(--bordo);
+
+    box-shadow: 7px 7px 0 var(--bordo);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.habilidade-card h3 {
+    margin-bottom: 10px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 1.75rem;
+
+    font-weight: 600;
+
+    color: var(--bordo);
+}
+
+.habilidade-card p {
+    color: var(--preto);
+
+    opacity: 0.68;
+}
+
+.habilidade-card:hover {
+    transform: translate(-4px, -4px);
+
+    box-shadow: 11px 11px 0 var(--bordo);
+}
+
+
+/* =========================
+   PROJETOS
+========================= */
+
+#projetos {
+    min-height: 80vh;
+
+    background-color: var(--creme);
+}
+
+.projetos-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 24px;
+}
+
+.projeto-card {
+    min-height: 320px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 34px;
+
+    background-color: var(--creme-claro);
+
+    border: 2px solid var(--bordo);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.projeto-card:hover {
+    transform: translate(-5px, -5px);
+
+    box-shadow: 8px 8px 0 var(--rosa);
+}
+
+.projeto-topo {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 20px;
+
+    margin-bottom: 24px;
+}
+
+.projeto-topo span {
+    color: var(--rosa);
+
+    font-size: 0.85rem;
+
+    font-weight: 700;
+}
+
+.projeto-topo h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 1.6rem;
+
+    font-weight: 600;
+
+    color: var(--bordo);
+}
+
+.projeto-card > p {
+    margin-bottom: 30px;
+
+    color: var(--preto);
+
+    opacity: 0.7;
+}
+
+.botao-projeto {
+    width: fit-content;
+
+    margin-top: auto;
+
+    padding: 10px 18px;
+
+    border: none;
+
+    border-radius: 999px;
+
+    background-color: var(--bordo);
+
+    color: var(--creme);
+
+    cursor: pointer;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 0.8rem;
+
+    font-weight: 600;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.botao-projeto:hover {
+    background-color: var(--rosa);
+
+    color: var(--preto);
+
+    transform: translateY(-2px);
+}
+
+.projeto-detalhes {
+    max-height: 0;
+
+    overflow: hidden;
+
+    margin-top: 0;
+
+    opacity: 0;
+
+    transition:
+        max-height 0.5s ease,
+        opacity 0.4s ease,
+        margin-top 0.4s ease;
+}
+
+.projeto-detalhes p {
+    color: var(--preto);
+
+    opacity: 0.68;
+}
+
+.projeto-card.aberto .projeto-detalhes {
+    max-height: 220px;
+
+    margin-top: 25px;
+
+    opacity: 1;
+}
+
+
+/* =========================
+   CONTATO
+========================= */
+
+#contato {
+    min-height: 70vh;
+
+    background-color: var(--bordo);
+
+    color: var(--creme);
+}
+
+#contato h2 {
+    color: var(--creme);
+}
+
+#contato p {
+    max-width: 620px;
+
+    margin-bottom: 32px;
+
+    color: var(--creme);
+
+    opacity: 0.82;
+}
+
+#contato a {
+    display: inline-block;
+
+    margin-right: 15px;
+
+    padding: 10px 18px;
+
+    border-radius: 999px;
+
+    background-color: var(--rosa);
+
+    color: var(--preto);
+
+    text-decoration: none;
+
+    font-size: 0.82rem;
+
+    font-weight: 600;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+}
+
+#contato a:hover {
+    background-color: var(--rosa-claro);
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 28px 10%;
+
+    background-color: var(--preto);
+
+    color: var(--creme);
+
+    border-top: 2px solid var(--rosa);
+}
+
+footer p {
+    font-size: 0.78rem;
+
+    opacity: 0.65;
+}
+
+
+/* =========================
+   ANIMAÇÃO DE ENTRADA
+========================= */
+
+.reveal {
+    opacity: 0;
+
+    transform: translateY(40px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 18px 5%;
+    }
+
+    nav {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    nav div {
+        gap: 14px;
+    }
+
+    section {
+        padding: 90px 7%;
+    }
+
+    #inicio {
+        min-height: 88vh;
+
+        padding: 75px 7%;
+
+        border-bottom-left-radius: 22px;
+        border-bottom-right-radius: 22px;
+    }
+
+    #inicio h1 {
+        font-size: clamp(4rem, 18vw, 7rem);
+
+        letter-spacing: -3px;
+    }
+
+    #inicio h2 {
+        font-size: 1.7rem;
+    }
+
+    .hero-assinatura {
+        position: static;
+
+        margin-top: 55px;
+
+        transform: rotate(-3deg);
+    }
+
+    .rabisco-1 {
+        top: 8%;
+        right: 6%;
+
+        font-size: 2.7rem;
+    }
+
+    .rabisco-2 {
+        right: 12%;
+
+        bottom: 20%;
+    }
+
+    .rabisco-3 {
+        top: 30%;
+
+        left: 5%;
+    }
+
+    section h2 {
+        font-size: 2.8rem;
+    }
+
+    .habilidades-grid,
+    .projetos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .habilidade-card {
+        min-height: 190px;
+    }
+
+    #contato a {
+        margin-bottom: 12px;
+    }
+}
